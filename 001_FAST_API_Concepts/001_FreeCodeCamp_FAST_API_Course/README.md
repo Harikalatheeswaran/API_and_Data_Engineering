@@ -7,5 +7,5 @@
 - Taught by Sanjeev Thigarajan
 - command to clone this repo : 
     ```bash
-    git clone git@github:Harikalatheeswaran/API_and_Data_Engineering
+    git clone git@github:Harikalatheeswaran/API_and_Data_Engineering.git
     ```
