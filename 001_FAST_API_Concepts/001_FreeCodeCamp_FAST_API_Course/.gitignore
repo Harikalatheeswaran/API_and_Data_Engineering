@@ -1,0 +1,113 @@
+########################################
+# Python Bytecode & Cache
+########################################
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+*.pickle
+*.p
+*.py[cod]
+
+########################################
+# Virtual Environments
+########################################
+.venv/
+venv/
+env/
+ENV/
+*.env
+*.venv
+
+########################################
+# Build & Distribution Artifacts
+########################################
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+wheelhouse/
+
+########################################
+# Unit Test / Coverage Files
+########################################
+htmlcov/
+.coverage
+.coverage.*
+.cache
+.nox/
+.tox/
+.pytest_cache/
+pytestdebug.log
+
+########################################
+# IDE & Editor Files
+########################################
+
+# VS Code
+.vscode/
+.history/
+*.code-workspace
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+########################################
+# OS Files (macOS/Windows/Linux)
+########################################
+.DS_Store
+Thumbs.db
+desktop.ini
+.Trashes
+.fseventsd
+.Spotlight-V100
+
+########################################
+# Logs & Dumps
+########################################
+*.log
+*.out
+*.err
+*.dump
+
+########################################
+# Environment Variable Files
+########################################
+.env
+.env.*
+*.key
+*.secret
+*.credentials
+
+########################################
+# Framework Specific (FastAPI / Uvicorn)
+########################################
+# Uvicorn or Gunicorn reload
+*.pid
+*.sock
+
+########################################
+# Local Data / Temp Files
+########################################
+*.sqlite3
+*.db
+*.sqlite
+tmp/
+temp/
