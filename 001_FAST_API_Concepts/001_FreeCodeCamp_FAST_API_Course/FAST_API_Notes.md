@@ -171,8 +171,41 @@
         uvicorn main:app --reload
         ```
     - what this does is : when do the changes to main.py file, a command will be sent to automatically restart the server.
-    
+- we use the `get` HTTP request to fetch details.
+- To more about the HTTP requests go to : https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+- Now when you add this to your code :
+    ```python
+    @app.get("/posts")
+    def get_posts():
+        return {"data": "This is your post"}
+    ```
+- You will see that in the URL : `http://127.0.0.1:8000/posts`, it would be printed as :
+    ```json
+    {"data": "This is your post"}
+    ```
+- The way fastapi works is that, when we send a request to out API server:
+    - it's going to go down the list of all of our path operations
+    - it's going to find the first match & once it finds it stops. 
+    - so if you have several `/post` path operations, it will go for the first one.
+    - 
+
+---
+
+### *4. Testing API*
+ - In order to test our API we need to send multiple requests & this cannot be done just using the browser.
+ - We can do it by using a tool called `Postman`.
+ - This tool allows us to `construct our own HTTP request`, this way we can specify the individual fields of an HTTP request.
+ - 
+
+### *5. Important Points*:
+- HTTP GET request v/s POST
+    - In a GET request, we send a request & the API send us some data.
+    - In a POST request, along with the request we send `DATA` to the API, & API will send us some data.
+    - We use POST request for "creating things", say we send a file to google drive, etc. 
+    - How each request talk to the API server : 
+        - GET : Hey API server, give me some data.
+        - POST : Hey API server, here's soem data, do whatever you need to do with it. 
 ---
 
 
-**`Stopped @ 47:35`**
+**`Stopped @ 01:00:05`**
