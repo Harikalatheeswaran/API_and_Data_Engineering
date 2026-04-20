@@ -205,7 +205,39 @@
     - How each request talk to the API server : 
         - GET : Hey API server, give me some data.
         - POST : Hey API server, here's soem data, do whatever you need to do with it. 
+    - The whole idea behind the post request is to send data to the server. We do this in the `body` of the request.
+    - In order to receive the data that the we need to do the following in out `path operation`:
+        - follow the below method :
+            ```python
+            @app.post("/createposts")
+            # in order to store the body data, we need to define a variable in our method.
+            # the fast api will convert the json into dict & store it in payload variable
+            def create_post(payload : dict = Body(...)): # type: ignore
+                """used to create post"""
+                print(payload) # it works
+                return {"new_post" : 
+                        {
+                            'title' : payload['title'], 
+                            'content' : payload['content']
+                        }
+                        }
+            ```
+    - Why we need schema : 
+        1. Its a pain to get all the values from the body
+        2. The client can send whatever data they want
+        3. data is not getting validated. Eg what if a user sends a blank titile?...hence data needs to be validated.
+        4. we ulitmately want to force the client to send data in a schema we expect.
+        5. This schema will act like a contract between the front end & the back end.
+    
+    - We're gonna make use of a lib called `pydantic`.
+    - PYdantic has got nothing to do with fastapi, you can use it wiht any of your python applications.
+    - Fast API just makes use of the it so we can `define a schema`.
+    - 
+
+
+
+
 ---
 
 
-**`Stopped @ 01:00:05`**
+**`Stopped @ 01:16:00`**
