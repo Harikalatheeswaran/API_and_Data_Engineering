@@ -169,6 +169,8 @@
     - IF you want to **dynamically** show changes in our server we run as below 
         ```bash
         uvicorn main:app --reload
+        # we now do: 
+        uvicorn 001_FAST_API_Concepts.001_FreeCodeCamp_FAST_API_Course.Code.main:app --reload
         ```
     - what this does is : when do the changes to main.py file, a command will be sent to automatically restart the server.
 - we use the `get` HTTP request to fetch details.
